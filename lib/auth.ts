@@ -3,7 +3,7 @@ import Credentials from "next-auth/providers/credentials";
 import { API_ENDPOINTS } from "./api-config";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
-  secret: process.env.NEXT_PUBLIC_AUTH_SECRET || "fallback-secret-for-development-only",
+  secret: process.env.NEXTAUTH_SECRET || "fallback-secret-for-development-only",
   providers: [
     Credentials({
       credentials: {
